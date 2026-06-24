@@ -1,2 +1,9 @@
-# my-website
-This is my personal website.
+# 测试站点
+
+这是一个无需构建工具的静态测试页面。直接用浏览器打开 `index.html` 即可预览。
+
+## 可替换内容
+
+- `index.html` 里的姓名、简介、项目、经历、邮箱和 GitHub 链接
+- `styles.css` 里的颜色变量与视觉细节
+- 项目卡片的标题、描述和链接
