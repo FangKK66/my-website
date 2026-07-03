@@ -1,199 +1,108 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>测试站点 | 页面原型</title>
+    <title>Kevin Fang | Personal Website</title>
     <meta
       name="description"
-      content="用于展示静态网站页面结构、视觉效果与交互的测试站点。"
+      content="The personal website of Kevin Fang, designed as a dark digital space for projects, writing, and experiments."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="回到首页">
-        <span class="brand-mark">TS</span>
-        <span>测试站点</span>
+      <a class="brand" href="#top" aria-label="Back to home">
+        <span class="brand-mark">KF</span>
+        <span>Kevin Fang</span>
       </a>
-      <nav class="site-nav" aria-label="主导航">
-        <a href="#work">项目</a>
-        <a href="#about">关于</a>
-        <a href="#timeline">经历</a>
-        <a href="#contact">联系</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="photography.html">Photography</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <button class="menu-button" type="button" aria-label="打开导航" aria-expanded="false">
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false">
         <span></span>
         <span></span>
       </button>
     </header>
 
     <main id="top">
-      <section class="hero section-band">
-        <div class="hero-copy">
-          <p class="eyebrow">Static Site / Test Page</p>
-          <h1>用于验证视觉与交互的测试页面。</h1>
-          <p class="hero-text">
-            这是一个不包含个人资料的静态页面原型，用来测试信息结构、响应式布局与浏览器交互。
-            所有文字与项目均为示例内容。
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#work">查看项目</a>
-            <a class="button ghost" href="#contact">联系我</a>
+      <section class="hero" aria-label="Introduction">
+        <div class="terminal-frame">
+          <div class="terminal-bar" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-        </div>
-
-        <div class="hero-visual" aria-label="测试页面视觉卡片">
-          <div class="portrait-panel">
-            <div class="portrait-orbit orbit-one"></div>
-            <div class="portrait-orbit orbit-two"></div>
-            <div class="portrait-core">
-              <span>TS</span>
-            </div>
-          </div>
-          <div class="floating-note note-top">
-            <strong>Current focus</strong>
-            <span>Web, product, systems</span>
-          </div>
-          <div class="floating-note note-bottom">
-            <strong>Page type</strong>
-            <span>Static prototype</span>
+          <div class="terminal-screen">
+            <p class="terminal-label">/home/kevinfang</p>
+            <h1>
+              <span class="typing-line" data-text="Hi, this is Kevin Fang."></span>
+            </h1>
+            <p class="welcome-line">
+              <span class="typing-line delayed" data-text="Welcome to my digital space."></span>
+            </p>
           </div>
         </div>
       </section>
 
-      <section class="metrics" aria-label="个人亮点">
-        <div>
-          <strong>6+</strong>
-          <span>可展示项目位</span>
-        </div>
-        <div>
-          <strong>3</strong>
-          <span>核心能力方向</span>
-        </div>
-        <div>
-          <strong>24h</strong>
-          <span>快速迭代节奏</span>
-        </div>
-      </section>
-
-      <section id="work" class="section">
+      <section id="work" class="section preview-section">
         <div class="section-heading">
-          <p class="eyebrow">Selected Work</p>
-          <h2>项目作品</h2>
-          <p>先放入结构清晰的项目展示卡，后续替换成真实项目名称、截图和链接即可。</p>
+          <p class="eyebrow">Next</p>
+          <h2>Projects, notes, and experiments will live here.</h2>
         </div>
-
-        <div class="work-grid">
-          <article class="project-card feature">
-            <div class="project-media media-a"></div>
-            <div class="project-content">
-              <span class="tag">Web App</span>
-              <h3>页面原型</h3>
-              <p>用于测试信息架构、视觉风格与响应式页面表现的一组示例内容。</p>
-              <a href="#contact" aria-label="了解页面原型">了解更多</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-media media-b"></div>
-            <div class="project-content">
-              <span class="tag">Product</span>
-              <h3>效率工具原型</h3>
-              <p>围绕日常任务管理、信息收集和复盘流程设计的一组交互原型。</p>
-              <a href="#contact" aria-label="了解效率工具原型">了解更多</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-media media-c"></div>
-            <div class="project-content">
-              <span class="tag">Research</span>
-              <h3>学习笔记系统</h3>
-              <p>把碎片化输入整理成主题、卡片和输出文章，强调长期积累的复利。</p>
-              <a href="#contact" aria-label="了解学习笔记系统">了解更多</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="about" class="section split-section">
-        <div class="section-heading compact">
-          <p class="eyebrow">About</p>
-          <h2>我如何工作</h2>
-          <p>
-            我喜欢把复杂问题拆成可以验证的小步骤：先理解真实场景，再做原型，最后用简洁的系统持续迭代。
-          </p>
-        </div>
-
-        <div class="skill-list">
+        <div class="preview-grid">
           <article>
             <span>01</span>
-            <h3>产品思考</h3>
-            <p>关注用户动机、信息层级和关键路径，让页面不是好看而已，而是真的好用。</p>
+            <h3>Selected Work</h3>
+            <p>A focused place for projects, prototypes, and product ideas.</p>
           </article>
           <article>
             <span>02</span>
-            <h3>前端实现</h3>
-            <p>能把设计落到清晰、响应式、可维护的代码里，兼顾性能和细节。</p>
+            <h3>Field Notes</h3>
+            <p>Short writing on learning, building, and the systems behind both.</p>
           </article>
           <article>
             <span>03</span>
-            <h3>内容表达</h3>
-            <p>用准确的结构与语言讲清项目价值，让作品、经历和观点更容易被理解。</p>
+            <h3>Experiments</h3>
+            <p>Small interactive pieces, visual tests, and useful web tools.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Photography</h3>
+            <p>A cinematic gallery for selected frames and visual archives.</p>
           </article>
         </div>
       </section>
 
-      <section id="timeline" class="section timeline-section">
+      <section id="about" class="section about-section">
         <div class="section-heading">
-          <p class="eyebrow">Timeline</p>
-          <h2>经历轨迹</h2>
-        </div>
-
-        <div class="timeline">
-          <article>
-            <time>2026</time>
-            <div>
-              <h3>创建页面原型</h3>
-              <p>建立一个可以持续调整、测试和验证的静态页面空间。</p>
-            </div>
-          </article>
-          <article>
-            <time>2025</time>
-            <div>
-              <h3>完善展示模块</h3>
-              <p>整理项目卡片、信息区块和可复用的页面组件。</p>
-            </div>
-          </article>
-          <article>
-            <time>Now</time>
-            <div>
-              <h3>持续测试与迭代</h3>
-              <p>根据不同设备和使用场景不断优化页面的呈现效果。</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="contact section-band">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>这是一个用于展示的测试区块。</h2>
+          <p class="eyebrow">About</p>
+          <h2>Built to stay simple, sharp, and easy to evolve.</h2>
           <p>
-            这里暂不包含邮箱、社交账号或任何可识别个人身份的联系信息。
+            This site starts as a clean static homepage and can later grow into a portfolio,
+            blog, or full-stack web app without changing the core visual direction.
           </p>
         </div>
-        <div class="contact-actions">
-          <a class="button primary" href="#top">返回首页</a>
-          <a class="button ghost" href="#work">查看示例</a>
-        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <p class="eyebrow">Contact</p>
+        <h2>More links coming soon.</h2>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>© 2026 Test Site</span>
-      <a href="#top">返回顶部</a>
+      <span>© 2026 Kevin Fang</span>
+      <a href="#top">Back to top</a>
     </footer>
 
     <script src="script.js"></script>

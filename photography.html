@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photography | Kevin Fang</title>
+    <meta
+      name="description"
+      content="A dark cinematic photography gallery and visual archive by Kevin Fang."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="photography-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Back to home">
+        <span class="brand-mark">KF</span>
+        <span>Kevin Fang</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html#work">Work</a>
+        <a href="photography.html" aria-current="page">Photography</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="photo-hero" aria-labelledby="photo-title">
+        <div class="photo-heading">
+          <p class="eyebrow">Photography / Gallery</p>
+          <h1 id="photo-title">Frames in motion.</h1>
+          <p>
+            A cinematic wall for selected photographs, designed as a moving screen with
+            stacked memories waiting on both sides.
+          </p>
+        </div>
+
+        <div class="cinema-gallery" data-gallery>
+          <div class="side-stack previous-stack" data-stack="previous" aria-label="Previous photos"></div>
+
+          <figure class="main-screen">
+            <div class="screen-glow" aria-hidden="true"></div>
+            <img data-main-photo src="https://picsum.photos/seed/kevin-frame-01/1400/900" alt="Monochrome city light study" />
+            <figcaption>
+              <span data-photo-count>01 / 06</span>
+              <strong data-photo-title>Midnight Signal</strong>
+              <em data-photo-meta>Urban light study</em>
+            </figcaption>
+          </figure>
+
+          <div class="side-stack next-stack" data-stack="next" aria-label="Upcoming photos"></div>
+
+          <div class="gallery-controls" aria-label="Gallery controls">
+            <button type="button" data-gallery-control="prev" aria-label="Previous photo">←</button>
+            <button type="button" data-gallery-control="next" aria-label="Next photo">→</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section archive-section" aria-labelledby="archive-title">
+        <div class="section-heading">
+          <p class="eyebrow">Archive Folders</p>
+          <h2 id="archive-title">Four categories, one stack.</h2>
+          <p>
+            Choose a folder tab to bring that archive to the top layer.
+          </p>
+        </div>
+
+        <div class="folder-tabs" role="tablist" aria-label="Photography categories">
+          <button class="is-active" type="button" role="tab" aria-selected="true" data-folder-tab="street">Street</button>
+          <button type="button" role="tab" aria-selected="false" data-folder-tab="landscape">Landscape</button>
+          <button type="button" role="tab" aria-selected="false" data-folder-tab="portrait">Portrait</button>
+          <button type="button" role="tab" aria-selected="false" data-folder-tab="travel">Travel</button>
+        </div>
+
+        <div class="folder-stage">
+          <article class="folder-card is-active" data-folder-panel="street">
+            <span class="folder-index">01</span>
+            <h3>Street</h3>
+            <p>Neon corners, late crossings, signs, reflections, and quick human geometry.</p>
+            <div class="folder-grid">
+              <img src="https://picsum.photos/seed/kevin-street-01/600/760" alt="Street archive sample one" />
+              <img src="https://picsum.photos/seed/kevin-street-02/600/760" alt="Street archive sample two" />
+              <img src="https://picsum.photos/seed/kevin-street-03/600/760" alt="Street archive sample three" />
+            </div>
+          </article>
+
+          <article class="folder-card" data-folder-panel="landscape">
+            <span class="folder-index">02</span>
+            <h3>Landscape</h3>
+            <p>Open air, weather, horizon lines, quiet distance, and the shape of light.</p>
+            <div class="folder-grid">
+              <img src="https://picsum.photos/seed/kevin-landscape-01/600/760" alt="Landscape archive sample one" />
+              <img src="https://picsum.photos/seed/kevin-landscape-02/600/760" alt="Landscape archive sample two" />
+              <img src="https://picsum.photos/seed/kevin-landscape-03/600/760" alt="Landscape archive sample three" />
+            </div>
+          </article>
+
+          <article class="folder-card" data-folder-panel="portrait">
+            <span class="folder-index">03</span>
+            <h3>Portrait</h3>
+            <p>Faces, posture, small expressions, and the mood between subject and camera.</p>
+            <div class="folder-grid">
+              <img src="https://picsum.photos/seed/kevin-portrait-01/600/760" alt="Portrait archive sample one" />
+              <img src="https://picsum.photos/seed/kevin-portrait-02/600/760" alt="Portrait archive sample two" />
+              <img src="https://picsum.photos/seed/kevin-portrait-03/600/760" alt="Portrait archive sample three" />
+            </div>
+          </article>
+
+          <article class="folder-card" data-folder-panel="travel">
+            <span class="folder-index">04</span>
+            <h3>Travel</h3>
+            <p>Stations, unfamiliar streets, hotel windows, long walks, and small discoveries.</p>
+            <div class="folder-grid">
+              <img src="https://picsum.photos/seed/kevin-travel-01/600/760" alt="Travel archive sample one" />
+              <img src="https://picsum.photos/seed/kevin-travel-02/600/760" alt="Travel archive sample two" />
+              <img src="https://picsum.photos/seed/kevin-travel-03/600/760" alt="Travel archive sample three" />
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Kevin Fang</span>
+      <a href="index.html">Back to home</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
