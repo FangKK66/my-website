@@ -356,7 +356,7 @@ h1 {
 
 .contact-email {
   margin-top: 8px;
-  font-size: clamp(26px, 5vw, 48px);
+  font-size: clamp(32px, 6vw, 58px);
 }
 
 .site-footer {
