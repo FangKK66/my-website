@@ -4,6 +4,7 @@ const typingLines = [...document.querySelectorAll(".typing-line")];
 const gallery = document.querySelector("[data-gallery]");
 const folderTabs = [...document.querySelectorAll("[data-folder-tab]")];
 const folderPanels = [...document.querySelectorAll("[data-folder-panel]")];
+const copyEmailButtons = [...document.querySelectorAll("[data-copy-email]")];
 
 menuButton?.addEventListener("click", () => {
   const isOpen = siteNav.classList.toggle("is-open");
@@ -16,6 +17,49 @@ siteNav?.addEventListener("click", (event) => {
     menuButton?.setAttribute("aria-expanded", "false");
   }
 });
+
+function setupEmailCopy() {
+  const copyText = async (text) => {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+    document.body.append(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  };
+
+  copyEmailButtons.forEach((button) => {
+    const hint = button.querySelector(".copy-hint");
+    const defaultHint = hint?.textContent ?? "Click to copy";
+    let resetTimer;
+
+    button.addEventListener("click", async () => {
+      const email = button.dataset.copyEmail;
+      if (!email) return;
+
+      try {
+        await copyText(email);
+        button.classList.add("is-copied");
+        if (hint) hint.textContent = "Copied";
+        window.clearTimeout(resetTimer);
+        resetTimer = window.setTimeout(() => {
+          button.classList.remove("is-copied");
+          if (hint) hint.textContent = defaultHint;
+        }, 1800);
+      } catch {
+        if (hint) hint.textContent = "Copy failed";
+      }
+    });
+  });
+}
 
 function typeText(element, delay = 56) {
   const text = element.dataset.text ?? "";
@@ -55,6 +99,7 @@ async function runTypingIntro() {
 }
 
 runTypingIntro();
+setupEmailCopy();
 
 const galleryPhotos = [
   {
